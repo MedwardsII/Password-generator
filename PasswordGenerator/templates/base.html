@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <header>
+        <title>Michael's Password Generator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <script src="{% static 'main.js' %}"></script>
+    </header>
+    <body>
+        <div class="content-wrap">
+            <div>
+                <h1 class="title-header">Password Generator</h1>
+            </div>
+            {% block content %}
+            {% endblock %}
+            <div class="password-container">
+                <span id="password-text">{{new_password}}</span>
+            </div>
+            <div class="btn-container">
+                <input type="submit" value="Generate" form="input-form" id="generate-btn"><br>
+                <input type="button" value="Copy To Clipboard" form="input-form" onclick="CopyToClipboard()">
+            </div>
+        </div>
+    </body>
+    <footer id="footer">
+        <ul class="footer-ul">
+            <li class="">Michael's Password Generator Project Demo</li><br>
+            <li class="links-container">
+                <span><a href="https://michael-edwards.me/" target="_blank" class="text-info">Michael's Portfolio Site</a></span>
+                <span><a href="https://github.com/MedwardsII/password-generator" target="_blank">Github Repository</a></span>
+            </li>
+            <li class="socials-container">
+                <span><a href="https://github.com/MedwardsII" target="_blank"><img src="https://img.icons8.com/nolan/64/github.png"/></a></span>
+                <span><a href="https://www.linkedin.com/in/michaelnedwardsii/" target="_blank"><img src="https://img.icons8.com/nolan/64/linkedin.png"/></a></span>
+            </li>
+            <li class="">Copyright © 2021, Michael N. Edwards, II</li>
+        </ul>
+      </footer>
+</html>
