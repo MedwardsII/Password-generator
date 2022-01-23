@@ -1,4 +1,5 @@
 function CopyToClipboard(){
-    const copyText = document.getElementById("password-text")
-    navigator.clipboard.writeText(copyText.innerHTML);
+    const e = document.getElementById("password-text")
+    const copyText = e.innerHTML.replace('&amp;', '&').replace('lt', '<').replace('gt', '>')
+    navigator.clipboard.writeText(copyText);
 }
